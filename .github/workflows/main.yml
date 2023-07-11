@@ -21,4 +21,4 @@ jobs:
           git merge a/merge
           git push origin main
     env:
-      ITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
