@@ -2,7 +2,7 @@ name: Auto Merge
 on:
   push:
     branches:
-      - main  # 仓库a的主分支名称
+      - merge  # 仓库a的主分支名称
 
 jobs:
   merge:
