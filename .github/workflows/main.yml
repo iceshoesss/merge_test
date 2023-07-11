@@ -1,0 +1,24 @@
+name: Auto Merge
+on:
+  push:
+    branches:
+      - merge  # 仓库a的主分支名称
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Merge repository a
+        run: |
+          git config user.name "Your Name"
+          git config user.email "your-email@example.com"
+          git remote add a git@github.com:iceshoesss/merge_test.git
+          git fetch a
+          git merge a/merge
+          git push origin main
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
