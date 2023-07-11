@@ -1,0 +1,20 @@
+name: Auto Merge
+on:
+  push:
+    branches:
+      - main  # 仓库a的主分支名称
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Merge repository a
+        run: |
+          git remote add a git@github.com:iceshoesss/merge_test.git
+          git fetch a
+          git merge a/main
+          git push origin merge
