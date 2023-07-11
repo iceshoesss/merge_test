@@ -16,5 +16,5 @@ jobs:
         run: |
           git remote add a git@github.com:iceshoesss/merge_test.git
           git fetch a
-          git merge a/main
-          git push origin merge
+          git merge a/merge
+          git push origin main
