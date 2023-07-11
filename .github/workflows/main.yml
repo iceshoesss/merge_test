@@ -18,3 +18,5 @@ jobs:
           git fetch a
           git merge a/merge
           git push origin main
+    env:
+      ITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
