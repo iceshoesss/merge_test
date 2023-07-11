@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Merge branch B into branch A
+    - name: Merge branch merge into branch main
       run: |
         git checkout main
         git merge merge --no-ff --no-commit
@@ -21,7 +21,7 @@ jobs:
 
     - name: Push changes
       run: |
-        git config --global user.name "mergebot"
-        git config --global user.email "gsd@sdw.com"
-        git commit -m "Automatically merged branch B into branch A"
+        git config --global user.name "Your Name"
+        git config --global user.email "your-email@example.com"
+        git commit -m "Automatically merged branch merge into branch main"
         git push
